@@ -2,7 +2,7 @@
 
 A command line interface used to pull financial/stock data based on user search/criteria.
 
-The program uses the publicallly available API from finnhub, argparse and other python libraries.
+The program uses the publicallly available API from finnhub, and is mainly use to demonstrate my ability to code Command line interface programs, to make programs with API's and keep clean and reusable code using SOLID principles in python.
 
 The API Is available at: https://finnhub.io/
 
@@ -10,21 +10,21 @@ The Documentaton is available at: https://finnhub.io/docs/api/introduction
 
 Library used: Argparse, Requests, plotly, Pandas, datetime, finnhub-python ..etc
 
-# Results
+# What it can do
 
-Below are a few screenshot showing some of the use cases of the program
+Currently The CLI can print basic stock fundamentals, the latest news, and some basic information concerning the company of any given stock.
 
-The help toggle as well as the current options
-![](screenshots/help.png)
+It can also generate a candlestick plots based on latest price action data.
 
-An example run
-![](screenshots/result1.png)
-![](screenshots/result2.png)
+# To get started.
 
-To view the html:
-[HTML Page of Plotly Output](screenshots/result3.html)
+1. Clone the repostiory
+2. pip install -r requirements.txt (I reccomend using a virtual env to avoid cluter)
+3. Get an API key at https://finnhub.io/dashboard
+4. Save the API key in a file called config.py (i.e. API.KEY = c1231231226e3eejh0)
+5. Run the program or use the -h toggle to get instructions :)
 
-# Using finhubb python vs API calls with Request
+## Quick note: Using finhubb python vs API calls with Request
 
 Throughout the project, finhubb api library will be used over conventional requests calls.
 
@@ -62,4 +62,23 @@ response = (requests.get(
 
 ```
 
-# What it can do
+# Results
+
+Below are a few screenshot showing some of the use cases of the program
+
+The help toggle as well as the current options
+![](screenshots/help.png)
+
+An example run
+![](screenshots/result1.png)
+![](screenshots/result2.png)
+
+To view the html:
+[HTML Page of Plotly Output](screenshots/result3.html)
+
+# To do next:
+
+1. Adding more toggles and more functionality.
+2. Adding technical indcators and generating support/resistance lines from price action.
+3. Alerts based on price action.
+4. Webhooks to constantly pull latest stock price.
