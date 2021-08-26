@@ -1,15 +1,31 @@
 # FinnhubApi-CLI-Project
- A command line interface used to pull financial/stock data based on user search/criteria. 
- 
- The program uses the publicallly available API from finnhub, argparse and other python libraries.
+
+A command line interface used to pull financial/stock data based on user search/criteria.
+
+The program uses the publicallly available API from finnhub, argparse and other python libraries.
 
 The API Is available at: https://finnhub.io/
 
 The Documentaton is available at: https://finnhub.io/docs/api/introduction
 
-Library used: Argparse, Requests & finnhub-python
+Library used: Argparse, Requests, plotly, Pandas, datetime, finnhub-python ..etc
+
+# Results
+
+Below are a few screenshot showing some of the use cases of the program
+
+The help toggle as well as the current options
+![](screenshots/help.png)
+
+An example run
+![](screenshots/result1.png)
+![](screenshots/result2.png)
+
+To view the html:
+[HTML Page of Plotly Output](screenshots/result3.html)
 
 # Using finhubb python vs API calls with Request
+
 Throughout the project, finhubb api library will be used over conventional requests calls.
 
 For example finhubb python library allows us to use:
@@ -24,6 +40,7 @@ finnhub_client.company_profile2(param)
 ```
 
 instead of using conventional api requests
+
 ```python:
 
 import config
@@ -36,8 +53,8 @@ param = {'symbol': "GOOG"}
 
 response = (requests.get(
     # Endpoint for getting financial overview of stock
-    url = config.BASE_URL + "/stock/profile2?",       
-    # Header for API key             
+    url = config.BASE_URL + "/stock/profile2?",
+    # Header for API key
     headers=header,
     # Parameter providing which stock
     params=param
